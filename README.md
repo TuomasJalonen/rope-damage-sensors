@@ -106,3 +106,19 @@ Zhou_2021_1 Zhou_2021_2 Zhou_2021_3 Zhou_2021_4 Zhou_2021_5 Zhou_2021_6 Zhou_202
 ```
 kDenseNet_BC_L100_12ch_1 kDenseNet_BC_L100_12ch_2 kDenseNet_BC_L100_12ch_3 kDenseNet_BC_L100_12ch_4
 ```
+## **📊 Results**
+After training, check the results/ folder for:
+	•	Training logs
+	•	Evaluation metrics
+	•	Model predictions
+
+## **📜 License**
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## **🤝 Contributing**
+Feel free to submit issues, fork the repo, and submit pull requests.
+
+## **👤 Author**
+Tuomas Jalonen
+
+## 📚 **Citation Information**
