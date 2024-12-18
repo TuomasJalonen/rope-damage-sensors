@@ -32,7 +32,7 @@ This project leverages deep learning and computer vision techniques to improve o
 ---
 
 ## **📂 Folder Structure**
-```plaintext
+```
 /rope-damage-sensors
 │── src/                        # Source code
 │   ├── train.py                # Model training script
@@ -58,7 +58,7 @@ This project leverages deep learning and computer vision techniques to improve o
 │── README.md                  # Project description
 │── requirements.txt           # Python dependencies
 │── .gitignore                 # Ignored files and folders
-```plaintext
+```
 
 ## **⚙️ Installation**
 **1.	Clone the repository:**
@@ -76,6 +76,33 @@ env\Scripts\activate      # On Windows
 ```
 pip install -r requirements.txt
 ```
-
-
-
+## **🧠 Usage**
+1.	Prepare your dataset: Follow the folder structure described above. If you want to use the dataset described in the paper, you can request it from roope.mellanen@konecranes.com.
+2.	Train and evaluate the model using 4-fold cross-validation:
+```
+python src/train.py --model MODEL_NAME
+python src/train.py --model CNN9 --epochs 150 --batch_size 32 # Example, you can change the model, epochs and batch size.
+```
+3. Retrain and evaluate the model so that validation data is included in the training set
+```
+python src/retrain.py --model MODEL_NAME
+python src/retrain.py --model CNN9 --epochs 150 --batch_size 32 # Example, you can change the model, epochs and batch size.
+```
+## **🔬 Models Available**
+MODEL_NAME can be one of the following. You can easily add or modify them in train.py and retrain.py.
+1. Our models:
+```
+CNN1 CNN2 CNN3 CNN4 CNN5 CNN6 CNN7 CNN8 CNN9 CNN10 CNN11 CNN12 CNN13 CNN14 CNN15 CNN16
+```
+2. Zhou et al. (2019) models:
+```
+Zhou_2019_1 Zhou_2019_2 Zhou_2019_3 Zhou_2019_4 Zhou_2019_5 Zhou_2019_6
+```
+3. Zhou et al. (2021) models:
+```
+Zhou_2021_1 Zhou_2021_2 Zhou_2021_3 Zhou_2021_4 Zhou_2021_5 Zhou_2021_6 Zhou_2021_7
+```
+4. Schuler at al. (2022) models:
+```
+kDenseNet_BC_L100_12ch_1 kDenseNet_BC_L100_12ch_2 kDenseNet_BC_L100_12ch_3 kDenseNet_BC_L100_12ch_4
+```
