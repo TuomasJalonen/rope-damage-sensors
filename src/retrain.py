@@ -15,7 +15,7 @@ import pandas as pd
 import shutil
 import tensorflow as tf
 from tensorflow.keras.metrics import Precision, Recall
-from tensorflow.keras.optimizers.legacy import Adam
+from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import LearningRateScheduler
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.metrics import confusion_matrix, roc_curve, auc
@@ -400,8 +400,8 @@ def train_and_evaluate(model_name, model_config, epochs, batch_size):
     pd.DataFrame(history.history).to_json(model_dir / "history.json")
 
     # Save the final model after the last epoch
-    model.save_weights(model_dir / "final_model")
-    logging.info(f"Final model saved at {model_dir / 'final_model'}")
+    model.save_weights(model_dir / "final_model.weights.h5")
+    logging.info(f"Final model saved at {model_dir / 'final_model.weights.h5'}")
 
     # Evaluate predictions
     test_predictions = model.predict(test_gen)

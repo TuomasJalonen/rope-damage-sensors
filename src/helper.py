@@ -47,7 +47,7 @@ def lr_schedule(epoch):
 
 def save_best_acc(DIRNAME):
     acc_callback = tf.keras.callbacks.ModelCheckpoint(
-        filepath=os.path.join(DIRNAME, "saved_model"),
+        filepath=os.path.join(DIRNAME, "saved_model.weights.h5"),
         save_weights_only=True,
         monitor="val_accuracy",
         mode="max",
@@ -277,8 +277,8 @@ def plot_training_curves(dir, history):
 
 
 def plot_cm(dir, df_cm):
-    sn.set(font_scale=1.4)  # for label size
-    ax = sn.heatmap(df_cm, annot=True, annot_kws={"size": 16}, cmap="YlGnBu")
+    sn.set_theme(font_scale=1.4)  # for label size
+    sn.heatmap(df_cm, annot=True, fmt="d", annot_kws={"size": 16}, cmap="YlGnBu")
     plt.xlabel("Predicted labels")
     plt.ylabel("True labels")
     plt.tight_layout()

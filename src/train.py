@@ -5,7 +5,6 @@ Training script for models.
 Author: Tuomas Jalonen
 """
 
-import os
 import json
 import logging
 import argparse
@@ -13,10 +12,10 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import tensorflow as tf
-from tensorflow_addons.metrics import F1Score
-from tensorflow.keras.metrics import Precision, Recall
-from tensorflow.keras.optimizers.legacy import Adam
+# import tensorflow as tf
+# from tensorflow_addons.metrics import F1Score
+from tensorflow.keras.metrics import Precision, Recall, F1Score
+from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import LearningRateScheduler
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.metrics import confusion_matrix, roc_curve, auc
@@ -328,7 +327,8 @@ def train_and_evaluate(args, model_config, folds_to_train):
             "accuracy",
             Precision(name="precision"),
             Recall(name="recall"),
-            F1Score(num_classes=2, average="micro", name="f1_score"),
+            # F1Score(num_classes=2, average="micro", name="f1_score"),
+            F1Score(average="micro", name="f1_score"),
         ],
     )
 
@@ -423,7 +423,7 @@ def train_and_evaluate_fold(
     plot_training_curves(fold_dir, history)
 
     # Load best model
-    model.load_weights(fold_dir / "saved_model")
+    model.load_weights(fold_dir / "saved_model.weights.h5")
 
     # Evaluate predictions
     val_predictions = model.predict(val_gen)
