@@ -3,8 +3,6 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ---
-[graphical_abstract.pdf](https://github.com/user-attachments/files/18183477/graphical_abstract.pdf)
-
 ## **📚 Description**
 This project focuses on automating damage detection in fiber lifting ropes using lightweight convolutional neural networks (CNNs). Damage in crane lifting ropes presents significant health and safety risks, making regular inspections essential. However, manual inspections are time-consuming, prone to human error, and interrupt operational workflow. This project proposes a deep learning-based approach to streamline the inspection process through real-time detection using computer vision.
 
