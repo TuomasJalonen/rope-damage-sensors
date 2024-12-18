@@ -58,20 +58,21 @@ This project leverages deep learning and computer vision techniques to improve o
 │── README.md                  # Project description
 │── requirements.txt           # Python dependencies
 │── .gitignore                 # Ignored files and folders
+```plaintext
 
-⚙️ Installation
-	1.	Clone the repository:
+## **⚙️ Installation**
+**1.	Clone the repository:**
 ```
 git clone https://github.com/TuomasJalonen/rope-damage-sensors.git
 cd rope-damage-sensors
 ```
-2.	Create a virtual environment:
+**2.	Create a virtual environment:**
 ```
 python -m venv env
 source env/bin/activate   # On Linux/Mac
 env\Scripts\activate      # On Windows
 ```
-3.	Install dependencies:
+**3.	Install dependencies:**
 ```
 pip install -r requirements.txt
 ```
