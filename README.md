@@ -33,16 +33,28 @@ This project leverages deep learning and computer vision techniques to improve o
 
 ## **📂 Folder Structure**
 ```plaintext
-/your_project
-│── src/                  # Source code
-│   ├── train.py          # Model training script
-│   ├── retrain.py        # Model retraining script
-│   └── helper.py         # Helper functions
-
-│── data/                 # Data files
-│── results/              # Training results and logs
-│── models/               # Saved models
-│── LICENSE               # License file
-│── README.md             # Project description
-│── requirements.txt      # Python dependencies
-│── .gitignore            # Ignored files and folders
+/rope-damage-sensors
+│── src/                        # Source code
+│   ├── train.py                # Model training script
+│   ├── retrain.py              # Model retraining script
+│   └── helper.py               # Helper functions
+│── data/                       # Data files
+│   ├── train                   # Training data
+│       ├── Fold_1              # Training data is split to 4-fold cross-validation data, i.e., 4 folds
+│           ├── Train           # Each fold contains Train and Validation folders
+│               ├── 0           # Class name for Normal ropes
+│                   ├── images
+│               ├── 1           # Class name for Damaged ropes
+│                   ├── images
+│           ├── Validation
+│               ├── 0
+│               ├── 1
+│       ...
+│       ├── Fold_4
+│   ├── test                   # Testing data
+│   └── combined_train         # retrain.py combines train and validation data into this folder
+│── results/                   # Training results and logs
+│── LICENSE                    # License file
+│── README.md                  # Project description
+│── requirements.txt           # Python dependencies
+│── .gitignore                 # Ignored files and folders
