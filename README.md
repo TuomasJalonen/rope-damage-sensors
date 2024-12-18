@@ -80,11 +80,17 @@ pip install -r requirements.txt
 2.	Train and evaluate the model using 4-fold cross-validation:
 ```
 python src/train.py --model MODEL_NAME
-python src/train.py --model CNN9 --epochs 150 --batch_size 32 # Example, you can change the model, epochs and batch size.
+```
+For example, you can change the model, epochs and batch size:
+```
+python src/train.py --model CNN9 --epochs 150 --batch_size 32
 ```
 3. Retrain and evaluate the model so that validation data is included in the training set
 ```
 python src/retrain.py --model MODEL_NAME
+```
+For example, you can change the model, epochs and batch size:
+```
 python src/retrain.py --model CNN9 --epochs 150 --batch_size 32 # Example, you can change the model, epochs and batch size.
 ```
 ## **🔬 Models Available**
