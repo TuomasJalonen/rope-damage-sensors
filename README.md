@@ -127,3 +127,13 @@ Feel free to submit issues, fork the repo, and submit pull requests.
 Tuomas Jalonen
 
 ## 📚 **Citation Information**
+```
+@article{jalonen2024real,
+  title={Real-Time Damage Detection in Fiber Lifting Ropes Using Lightweight Convolutional Neural Networks},
+  author={Jalonen, Tuomas and Al-Sa’d, Mohammad and Mellanen, Roope and Kiranyaz, Serkan and Gabbouj, Moncef},
+  journal={IEEE Sensors Journal},
+  year={2024},
+  publisher={IEEE}
+}
+```
+
